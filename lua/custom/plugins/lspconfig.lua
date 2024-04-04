@@ -1,3 +1,24 @@
+local servers = {
+  lua_ls = {
+    settings = {
+      Lua = {
+        completion = {
+          callSnippet = 'Replace',
+        },
+      },
+    },
+  },
+  gopls = {
+    cmd = { 'gopls', 'serve' },
+    settings = {
+      gopls = {
+        staticcheck = true,
+      },
+    },
+  },
+  zls = {},
+}
+
 return {
   {
     'neovim/nvim-lspconfig',
@@ -25,26 +46,6 @@ return {
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-
-      local servers = {
-        lua_ls = {
-          settings = {
-            Lua = {
-              completion = {
-                callSnippet = 'Replace',
-              },
-            },
-          },
-        },
-        gopls = {
-          cmd = { 'gopls', 'serve' },
-          settings = {
-            gopls = {
-              staticcheck = true,
-            },
-          },
-        },
-      }
 
       for server, config in pairs(servers) do
         require('lspconfig')[server].setup(vim.tbl_deep_extend('force', {
