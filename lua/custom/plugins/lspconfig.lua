@@ -17,6 +17,7 @@ local servers = {
     },
   },
   zls = {},
+  tsserver = {},
 }
 
 return {
