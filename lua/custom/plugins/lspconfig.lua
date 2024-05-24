@@ -18,6 +18,13 @@ local servers = {
   },
   zls = {},
   tsserver = {},
+  rust_analyzer = {
+    ['rust-analyzer'] = {
+      check = {
+        command = 'clippy',
+      },
+    },
+  },
 }
 
 return {
