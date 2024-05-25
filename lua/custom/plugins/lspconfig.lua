@@ -49,6 +49,11 @@ return {
           map('gI', builtin.lsp_implementations, '[G]oto [I]mplementations')
 
           map('K', vim.lsp.buf.hover, 'Hover Documentation')
+          map('<leader>rn', vim.lsp.buf.rename, '[R]ename')
+          map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+          map('<leader>e', vim.lsp.diagnostic.show_line_diagnostics, '[E]rrors')
+          map('<leader>q', vim.lsp.diagnostic.set_loclist, '[Q]uickfix')
+
         end,
       })
 
