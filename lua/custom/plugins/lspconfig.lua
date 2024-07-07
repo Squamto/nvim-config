@@ -19,9 +19,11 @@ local servers = {
   zls = {},
   tsserver = {},
   rust_analyzer = {
-    ['rust-analyzer'] = {
-      check = {
-        command = 'clippy',
+    settings = {
+      ["rust-analyzer"] = {
+        check = {
+          command = "clippy",
+        },
       },
     },
   },
