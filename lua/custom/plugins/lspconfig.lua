@@ -8,6 +8,7 @@ local servers = {
       },
     },
   },
+  ocamllsp = {},
   gopls = {
     cmd = { 'gopls', 'serve' },
     settings = {
