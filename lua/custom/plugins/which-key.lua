@@ -5,9 +5,7 @@ return {
     config = function()
       require('which-key').setup()
 
-      require('which-key').register( {
-        s = { name = '[S]earch' }
-      }, {prefix = '<leader>'})
+      require('which-key').add({ { "<leader>s", { group = '[S]earch' } } })
     end,
   },
 }
