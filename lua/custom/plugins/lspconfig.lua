@@ -9,6 +9,10 @@ local servers = {
     },
   },
   ocamllsp = {},
+  basedpyright = {},
+  clangd = {
+    cmd = { 'clangd', '--background-index', '--query-driver=**/arm-none-eabi-*', '--header-insertion=never', '--compile-commands-dir=build/latest' },
+  },
   gopls = {
     cmd = { 'gopls', 'serve' },
     settings = {
