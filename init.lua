@@ -7,6 +7,8 @@ require 'options'
 
 require 'keymaps'
 
+require 'commands'
+
 require 'lazy-bootstrap'
 
 require 'lazy-plugins'

@@ -36,12 +36,6 @@ return {
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 
-      local function grep_open_files()
-        require('telescope.builtin').current_buffer_fuzzy_find {
-          grep_open_files = true,
-          prompt_title = 'Live Grep in Open Files',
-        }
-      end
       vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, { desc = '[/] in Current Buffer' })
     end,
   },
