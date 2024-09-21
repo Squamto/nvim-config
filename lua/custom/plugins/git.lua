@@ -14,7 +14,7 @@ return {
   {
     'tpope/vim-fugitive',
     config = function()
-      vim.api.nvim_set_keymap('n', '<leader>gs', ':top Git<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<leader>gs', ':top Git<CR>', { noremap = true, silent = true, desc = 'Git status' })
     end
   },
 }
