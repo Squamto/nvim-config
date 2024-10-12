@@ -10,6 +10,9 @@ local servers = {
   },
   ocamllsp = {},
   basedpyright = {},
+  jsonls = {
+    cmd = { 'vscode-json-languageserver', '--stdio' },
+  },
   clangd = {
     -- cmd = { 'clangd', '--background-index', '--query-driver=**/arm-none-eabi-*', '--header-insertion=never', '--compile-commands-dir=build/latest' },
   },
