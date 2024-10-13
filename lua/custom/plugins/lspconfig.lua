@@ -13,6 +13,7 @@ local servers = {
   jsonls = {
     cmd = { 'vscode-json-languageserver', '--stdio' },
   },
+  glsl_analyzer = {},
   clangd = {
     -- cmd = { 'clangd', '--background-index', '--query-driver=**/arm-none-eabi-*', '--header-insertion=never', '--compile-commands-dir=build/latest' },
   },

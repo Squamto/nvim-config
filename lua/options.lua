@@ -38,4 +38,11 @@ vim.opt.cursorline = true
 
 vim.opt.scrolloff = 10
 
+vim.filetype.add {
+  extension = {
+    frag = 'glsl',
+    vert = 'glsl',
+  }
+}
+
 -- vim: ts=2 sts=2 sw=2 et
