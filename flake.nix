@@ -14,6 +14,7 @@
     {
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
+          gcc
           stylua
           lua-language-server
         ];
