@@ -71,6 +71,12 @@ return {
       dap.configurations.cpp =
       {
         {
+          name = "Attach",
+          type = "gdb",
+          request = "attach",
+          pid = require('dap.utils').pick_process,
+        },
+        {
           name = "Launch previous",
           type = "gdb",
           request = "launch",
