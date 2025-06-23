@@ -8,6 +8,7 @@ local servers = {
       },
     },
   },
+  nil_ls = {},
   ocamllsp = {},
   basedpyright = {},
   jsonls = {
