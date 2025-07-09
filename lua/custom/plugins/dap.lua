@@ -1,5 +1,19 @@
 return {
   {
+    "leoluz/nvim-dap-go",
+    opts = {
+      dap_configurations = {
+        {
+          type = "go",
+          name = "Attach remote",
+          mode = "remote",
+          request = "attach",
+        },
+      },
+    },
+    ft = "go"
+  },
+  {
     "mfussenegger/nvim-dap",
     dependencies = {
       "rcarriga/nvim-dap-ui",
@@ -111,5 +125,5 @@ return {
         },
       }
     end,
-  }
+  },
 }
