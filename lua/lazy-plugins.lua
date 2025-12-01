@@ -1,4 +1,5 @@
 require('lazy').setup {
+  defaults = { lazy = true },
   'tpope/vim-sleuth',
   {
     -- Theme inspired by Atom
@@ -12,7 +13,6 @@ require('lazy').setup {
       vim.cmd.colorscheme 'onedark'
     end,
   },
-  { 'numToStr/Comment.nvim', opts = {} },
 
   { import = 'custom.plugins' },
 }

@@ -44,7 +44,14 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       { 'j-hui/fidget.nvim', opts = {} },
-      { 'folke/neodev.nvim', opts = {} },
+      {
+        'folke/lazydev.nvim',
+        opts = {
+          library = {
+            { path = "${3rd}/luv/library", words = { "vim%.uv" } }
+          }
+        }
+      },
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -70,10 +77,10 @@ return {
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
           local client = vim.lsp.get_client_by_id(event.data.client_id)
-          if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+          if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
             map('<leader>th', function()
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-            end, '[T]oggle Inlzy [H]ints')
+            end, '[T]oggle Inlay [H]ints')
           end
         end,
       })
@@ -82,10 +89,11 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       for server, config in pairs(servers) do
-        require('lspconfig')[server].setup(vim.tbl_deep_extend('force', {
+        vim.lsp.config(server, vim.tbl_deep_extend('force', {
           capabilities = capabilities,
           on_attach = require('fidget').on_attach,
         }, config))
+        vim.lsp.enable(server)
       end
     end,
   },

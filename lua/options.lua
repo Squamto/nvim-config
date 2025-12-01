@@ -23,7 +23,7 @@ vim.opt.timeoutlen = 300
 vim.opt.hlsearch = true
 
 vim.opt.splitright = true
-vim.opt.splitbelow = true
+-- vim.opt.splitbelow = true
 
 vim.opt.list = true
 vim.opt.listchars = {

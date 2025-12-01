@@ -1,11 +1,10 @@
 return {
   {
     'folke/which-key.nvim',
-    event = 'VimEnter',
-    config = function()
-      require('which-key').setup()
-
-      require('which-key').add({ { "<leader>s", { group = '[S]earch' } } })
-    end,
+    event = 'VeryLazy',
+    opts = {},
+    keys = {
+      { "<leader>?", function() require('which-key').show({ global = false }) end, desc = "Buffer Local Keymaps (which-key)" }
+    }
   },
 }

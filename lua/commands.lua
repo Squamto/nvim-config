@@ -21,19 +21,20 @@ vim.api.nvim_create_autocmd("BufEnter", {
     local function run_checkpatch()
       local filename = vim.api.nvim_buf_get_name(0)
       local cmd = 'scripts/checkpatch.pl --no-tree --no-signoff --terse -f ' .. filename
-      local output = vim.fn.system(cmd)
+      local result = vim.system({ cmd }):wait()
 
-      if vim.api.nvim_get_vvar('shell_error') == 127 then
-        vim.api.nvim_err_writeln('Error running checkpatch: ' .. output)
+      if result.code ~= 0 then
+        vim.notify('Error running checkpatch\nstderr: ' .. result.stderr .. '\nstdout: ' .. result.stdout,
+          vim.log.levels.ERROR)
         return
       end
 
-      if output == '' then
+      if result.stdout == '' then
         print('No issues found')
         return
       end
 
-      local lines = vim.split(output, '\n')
+      local lines = vim.split(result.stdout, '\n')
       ---@type vim.Diagnostic[]
       local diagnostics = {}
 

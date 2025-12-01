@@ -1,8 +1,9 @@
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
+-- vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { noremap = true, silent = true})
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostics' })
 vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Push Buffer [D]iagnostics to [Q]uickFixList' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Push All [D]iagnostics to [Q]uickFixList' })
+vim.keymap.set('n', '<A-x>', function() vim.notify("Hello World") end,
+  { desc = 'Push All [D]iagnostics to [Q]uickFixList' })
 
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
