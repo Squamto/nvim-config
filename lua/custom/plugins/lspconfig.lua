@@ -1,4 +1,7 @@
 local servers = {
+  astro = {},
+  tailwindcss = {},
+  ols = {},
   lua_ls = {
     settings = {
       Lua = {

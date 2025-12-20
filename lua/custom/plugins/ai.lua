@@ -1,4 +1,8 @@
 return {
+  {
+    "github/copilot.vim",
+    lazy = false,
+  }
   -- {
   --   "olimorris/codecompanion.nvim",
   --   opts = {
