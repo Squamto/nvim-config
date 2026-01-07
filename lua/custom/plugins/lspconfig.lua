@@ -1,5 +1,6 @@
 local servers = {
   astro = {},
+  arduino_language_server = {},
   tailwindcss = {},
   ols = {},
   lua_ls = {

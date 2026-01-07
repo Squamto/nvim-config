@@ -1,8 +1,13 @@
 return {
   {
-    "github/copilot.vim",
     lazy = false,
+    "supermaven-inc/supermaven-nvim",
+    opts = {}
   }
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  -- }
   -- {
   --   "olimorris/codecompanion.nvim",
   --   opts = {
