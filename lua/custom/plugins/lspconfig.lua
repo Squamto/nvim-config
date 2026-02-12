@@ -3,6 +3,7 @@ local servers = {
   arduino_language_server = {},
   tailwindcss = {},
   ols = {},
+  phpactor = {},
   lua_ls = {
     settings = {
       Lua = {
