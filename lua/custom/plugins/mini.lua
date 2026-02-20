@@ -27,8 +27,9 @@ return {
         } }
       vim.keymap.set('n', '<leader>td', MiniDiff.toggle_overlay, { desc = '[T]oggle [D]iff View' })
 
-      require('mini.files').setup {}
-      vim.keymap.set('n', '<leader>f', MiniFiles.open, { desc = 'Open Mini [F]ile Explorer' })
+      -- replaced with yazi
+      -- require('mini.files').setup {}
+      -- vim.keymap.set('n', '<leader>f', MiniFiles.open, { desc = 'Open Mini [F]ile Explorer' })
     end
   }
 }
