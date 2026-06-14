@@ -4,6 +4,7 @@ local servers = {
   tailwindcss = {},
   ols = {},
   phpactor = {},
+  hls = {},
   lua_ls = {
     settings = {
       Lua = {
