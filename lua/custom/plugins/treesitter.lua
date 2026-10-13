@@ -1,3 +1,4 @@
+if false then return {} else
 return {
   {
     'nvim-treesitter/nvim-treesitter',
@@ -36,3 +37,4 @@ return {
   },
   'nvim-treesitter/nvim-treesitter-context',
 }
+end
