@@ -1,6 +1,11 @@
 if false then
-  return {}
-else
+  return {
+    {
+      'goerz/jupytext.nvim',
+      opts = {}, -- see Options
+    }
+  }
+elseif false then
   return {
     {
       "ajbucci/ipynb.nvim",
@@ -27,4 +32,6 @@ else
       },
     }
   }
+else
+  return {}
 end
